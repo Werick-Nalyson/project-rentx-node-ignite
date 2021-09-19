@@ -12,3 +12,4 @@ requirements
 
 uploads/*
 !uploads/.gitkeep
+tmp/
