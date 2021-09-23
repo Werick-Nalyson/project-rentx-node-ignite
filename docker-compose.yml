@@ -26,6 +26,12 @@ services:
       - database
     depends_on:
       - database
+  adminer:
+    image: adminer
+    container_name: rentx-adminer
+    restart: always
+    ports:
+      - 8080:8080
 
 volumes:
   pgdata:
