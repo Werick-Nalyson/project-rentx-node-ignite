@@ -1,5 +1,5 @@
 /* eslint-disable prettier/prettier */
-import { Specification } from '../../model/Specification';
+import { Specification } from '../../entities/Specification';
 import { ISpecificationsRepository } from '../../repositories/ISpecificationsRepository';
 
 interface IRequest {
