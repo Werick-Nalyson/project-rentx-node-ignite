@@ -1,4 +1,3 @@
-import { Category } from '../entities/Category';
 import { Specification } from '../entities/Specification';
 
 interface ICreateSpecificationDTO {
@@ -7,8 +6,11 @@ interface ICreateSpecificationDTO {
 }
 
 interface ISpecificationsRepository {
-  create({ name, description }: ICreateSpecificationDTO): Specification;
-  findByName(name: string): Category;
+  create({
+    name,
+    description,
+  }: ICreateSpecificationDTO): Promise<Specification>;
+  findByName(name: string): Promise<Specification>;
 }
 
 export { ICreateSpecificationDTO, ISpecificationsRepository };
