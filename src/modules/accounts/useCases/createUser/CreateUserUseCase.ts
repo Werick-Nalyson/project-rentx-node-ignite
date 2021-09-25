@@ -15,14 +15,12 @@ class CreateUserUseCase {
   async execute({
     name,
     email,
-    username,
     driver_license,
     password,
   }: ICreateUserDTO): Promise<User> {
     const user = await this.usersRepository.create({
       name,
       email,
-      username,
       driver_license,
       password,
     });

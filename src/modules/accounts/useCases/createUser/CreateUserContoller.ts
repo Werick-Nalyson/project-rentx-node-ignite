@@ -11,7 +11,6 @@ class CreateUserContoller {
 
     const user = await createUserUseCase.execute({
       name,
-      username,
       password,
       driver_license,
       email,
