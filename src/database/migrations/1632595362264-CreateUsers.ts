@@ -9,6 +9,7 @@ export class CreateUsers1632595362264 implements MigrationInterface {
           {
             name: 'id',
             type: 'uuid',
+            isPrimary: true,
           },
           {
             name: 'name',
@@ -39,6 +40,7 @@ export class CreateUsers1632595362264 implements MigrationInterface {
           {
             name: 'avatar',
             type: 'varchar',
+            isNullable: true,
           },
           {
             name: 'created_at',
