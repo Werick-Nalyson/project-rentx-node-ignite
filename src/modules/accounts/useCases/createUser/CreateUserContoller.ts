@@ -16,6 +16,8 @@ class CreateUserContoller {
       email,
     });
 
+    delete user.password;
+
     return response.status(201).json(user);
   }
 }
