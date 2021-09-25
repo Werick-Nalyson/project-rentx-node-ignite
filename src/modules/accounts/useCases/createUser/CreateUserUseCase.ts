@@ -1,9 +1,11 @@
 /* eslint-disable prettier/prettier */
+import { hash } from 'bcrypt'
 import { inject, injectable } from 'tsyringe';
 
 import { ICreateUserDTO } from '../../dtos/ICreateUserDTO';
 import { User } from '../../entities/User';
 import { IUsersRepository } from '../../repositories/IUsersRepository';
+
 
 @injectable()
 class CreateUserUseCase {
@@ -18,11 +20,13 @@ class CreateUserUseCase {
     driver_license,
     password,
   }: ICreateUserDTO): Promise<User> {
+    const passwordHash = await hash(password, 8)
+
     const user = await this.usersRepository.create({
       name,
       email,
       driver_license,
-      password,
+      password: passwordHash,
     });
 
     return user;
