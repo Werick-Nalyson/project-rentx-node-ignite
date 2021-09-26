@@ -1,4 +1,4 @@
-import { container } from 'tsyringe';
+import { container, delay } from 'tsyringe';
 
 import { UsersRepository } from '../../modules/accounts/repositories/implementations/UsersRepository';
 import { IUsersRepository } from '../../modules/accounts/repositories/IUsersRepository';
@@ -19,5 +19,5 @@ container.registerSingleton<ISpecificationsRepository>(
 
 container.registerSingleton<IUsersRepository>(
   'UsersRepository',
-  UsersRepository,
+  delay(() => UsersRepository),
 );
