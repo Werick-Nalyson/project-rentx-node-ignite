@@ -20,7 +20,7 @@
     "module": "commonjs",
     // "rootDir": "./",
     // "moduleResolution": "node",
-    // "baseUrl": "./",
+    "baseUrl": "./",
     // "paths": {},
     // "rootDirs": [],
     // "typeRoots": [],
