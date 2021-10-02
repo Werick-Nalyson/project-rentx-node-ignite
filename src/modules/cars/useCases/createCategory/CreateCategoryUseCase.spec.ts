@@ -1,6 +1,6 @@
-import { AppError } from '@errors/AppError';
-import { Category } from '@modules/cars/entities/Category';
+import { Category } from '@modules/cars/infra/typeorm/entities/Category';
 import { CategoriesRepositoryInMemory } from '@modules/cars/repositories/in-memory/CategoriesRepositoryInMemory';
+import { AppError } from '@shared/errors/AppError';
 
 import { CreateCategoryUseCase } from './CreateCategoryUseCase';
 
