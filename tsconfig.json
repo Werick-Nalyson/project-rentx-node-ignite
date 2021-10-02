@@ -20,8 +20,24 @@
     "module": "commonjs",
     // "rootDir": "./",
     // "moduleResolution": "node",
-    "baseUrl": "./",
-    // "paths": {},
+    "baseUrl": "./src",
+    "paths": {
+      "@modules/*": [
+        "modules/*"
+      ],
+      "@config/*": [
+        "config/*"
+      ],
+      "@shared/*": [
+        "shared/*"
+      ],
+      "@errors/*": [
+        "errors/*"
+      ],
+      "@utils/*": [
+        "utils/*"
+      ]
+    },
     // "rootDirs": [],
     // "typeRoots": [],
     // "types": [],
