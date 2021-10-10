@@ -14,8 +14,6 @@ class AuthenticateUserController {
       password,
     });
 
-    console.log(token);
-
     return response.json(token);
   }
 }
