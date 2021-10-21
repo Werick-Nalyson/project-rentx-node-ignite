@@ -1,13 +1,17 @@
+import { inject, injectable } from 'tsyringe';
+
+import { ICreateRentalDTO } from '@modules/rentals/dtos/ICreateRentalDTO';
+import { Rental } from '@modules/rentals/infra/entities/Rental';
+import { IRentalsRepository } from '@modules/rentals/repositories/IRentalsRepository';
 import { IDateProvider } from '@shared/container/providers/DateProvider/IDateProvider';
 import { AppError } from '@shared/errors/AppError';
 
-import { ICreateRentalDTO } from '../dtos/ICreateRentalDTO';
-import { Rental } from '../infra/entities/Rental';
-import { IRentalsRepository } from '../repositories/IRentalsRepository';
-
+@injectable()
 class CreateRentalUseCase {
   constructor(
+    @inject('RentalsRepository')
     private rentalsRepository: IRentalsRepository,
+    @inject('DayjsDateProvider')
     private dateProvider: IDateProvider,
   ) { }
 
