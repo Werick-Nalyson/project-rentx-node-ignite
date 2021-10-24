@@ -10,6 +10,7 @@
     "seed:admin": "ts-node-dev src/shared/infra/typeorm/seed/admin.ts"
   },
   "dependencies": {
+    "aws-sdk": "^2.1013.0",
     "bcrypt": "^5.0.1",
     "cors": "^2.8.5",
     "csv-parse": "^4.16.3",
