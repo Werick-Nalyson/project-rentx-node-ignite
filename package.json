@@ -7,11 +7,14 @@
     "dev": "ts-node-dev -r tsconfig-paths/register --inspect --transpile-only --ignore-watch node_modules --respawn src/shared/infra/http/server.ts",
     "typeorm": "ts-node-dev -r tsconfig-paths/register ./node_modules/typeorm/cli",
     "test": "jest",
-    "seed:admin": "ts-node-dev src/shared/infra/typeorm/seed/admin.ts"
+    "seed:admin": "ts-node-dev src/shared/infra/typeorm/seed/admin.ts",
+    "migration:run": "docker exec rentx npm run typeorm migration:run",
+    "migration:create": "docker exec rentx npm run typeorm migration:create - -n"
   },
   "dependencies": {
     "aws-sdk": "^2.1013.0",
     "bcrypt": "^5.0.1",
+    "class-transformer": "^0.5.1",
     "cors": "^2.8.5",
     "csv-parse": "^4.16.3",
     "dayjs": "^1.10.7",
