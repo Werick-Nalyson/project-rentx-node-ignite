@@ -13,3 +13,4 @@ requirements
 uploads/*
 !uploads/.gitkeep
 tmp/
+/dist
