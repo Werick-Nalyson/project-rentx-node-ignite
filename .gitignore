@@ -2,6 +2,7 @@
 .vscode/
 node_modules/
 build/
+dist/
 temp/
 .env
 coverage
@@ -12,5 +13,7 @@ requirements
 
 uploads/*
 !uploads/.gitkeep
-tmp/
-/dist
+tmp/*
+!tmp/.gitkeep
+
+
