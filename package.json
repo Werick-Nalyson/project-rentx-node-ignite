@@ -7,7 +7,7 @@
     "build": "babel src --extensions \".js,.ts\" --out-dir dist  --copy-files",
     "dev": "ts-node-dev -r tsconfig-paths/register --inspect --transpile-only --ignore-watch node_modules --respawn src/shared/infra/http/server.ts",
     "typeorm": "ts-node-dev -r tsconfig-paths/register ./node_modules/typeorm/cli",
-    "test": "jest",
+    "test": "NODE_ENV=test jest",
     "seed:admin": "ts-node-dev src/shared/infra/typeorm/seed/admin.ts",
     "migration:run": "docker exec rentx npm run typeorm migration:run",
     "migration:create": "docker exec rentx npm run typeorm migration:create - -n"
@@ -34,7 +34,8 @@
     "swagger-ui-express": "^4.1.6",
     "tsyringe": "^4.6.0",
     "typeorm": "^0.2.37",
-    "uuid": "^8.3.2"
+    "uuid": "^8.3.2",
+    "supertest": "^6.1.6"
   },
   "devDependencies": {
     "@babel/cli": "^7.16.7",
@@ -54,6 +55,7 @@
     "@types/node": "^16.9.2",
     "@types/nodemailer": "^6.4.4",
     "@types/redis": "^4.0.11",
+    "@types/supertest": "^2.0.11",
     "@types/swagger-ui-express": "^4.1.3",
     "@types/uuid": "^8.3.1",
     "@typescript-eslint/eslint-plugin": "^4.31.1",
